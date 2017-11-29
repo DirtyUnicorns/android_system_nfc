@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012-2014 NXP Semiconductors
+ * Copyright (C) 2010 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef _PHNXPNCIHAL_KOVIO_H_
-#define _PHNXPNCIHAL_KOVIO_H_
 
-#include <phNxpNciHal.h>
-#include <phTmlNfc.h>
-#include <string.h>
+#ifndef _LIBSPARSE_SPARSE_CRC32_H_
+#define _LIBSPARSE_SPARSE_CRC32_H_
 
-extern NFCSTATUS phNxpNciHal_kovio_rsp_ext(uint8_t* p_ntf, uint16_t* p_len);
-extern void phNxpNciHal_clean_Kovio_Ext();
+#include <stdint.h>
 
-#endif /* _PHNXPNCIHAL_KOVIO_H_ */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+uint32_t sparse_crc32(uint32_t crc, const void* buf, size_t size);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
